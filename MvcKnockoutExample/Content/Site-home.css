@@ -1,0 +1,20 @@
+﻿
+.studentTable
+{
+    background:#eee;
+    margin:10px;
+    padding:10px;
+}
+
+.studentTable td{
+    margin:5px;
+    padding:5px;
+
+}
+
+.studentTable th{
+    margin:5px;
+    padding:5px;
+
+}
+

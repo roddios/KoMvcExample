@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "HomeView";
+}
+
+@Styles.Render("~/Content/common/css")
+@Scripts.Render("~/bundles/common/js")
+@Styles.Render("~/Content/home/css")
+@Scripts.Render("~/bundles/home/js")
+
+<h2>Knockout Example with MVC.Net</h2>
+
+<div class="row" id="ko-bind-section">
+
+
+        <div class="col-md-6">
+            <table class="studentTable">
+                <thead>
+                    <tr><th>First name</th><th>Last name</th></tr>
+                </thead>
+                <tbody data-bind="foreach: students">
+                    <tr>
+                        <td data-bind="text: Id"></td>
+                        <td data-bind="text: Name"></td>
+                        <td><button data-bind="click: $parent.deleteThis" class="btn btn-danger">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+
+        <div class="col-md-6">
+            <h3>Add New Student</h3>
+            <form>
+                <div class="form-group">
+                    <label for="id">Student Id</label>
+                    <input type="text" class="form-control" id="id" aria-describedby="id" placeholder="Student Id" data-bind="value: newId">
+                </div>
+                <div class="form-group">
+                    <label for="name">Student Name</label>
+                    <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Student Name" data-bind="value: newName">
+                </div>
+                <div class="form-group">
+                    <button id="addStudent" class="btn btn-default" data-bind="click: addNewStudent">Add New Student</button>
+                </div>
+            </form>
+
+        </div>
+
+    <button class="btn btn-primary" data-bind="click:sayHello">Say Hello</button>
+  
+</div>
+
+
+
+<script>
+    $(document).ready(function () {
+        bindHomeViewModel();
+    });
+</script>

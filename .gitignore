@@ -3,3 +3,5 @@
 ################################################################################
 
 /MvcKnockoutExample/obj/Debug
+/MvcKnockoutExample/bin
+/packages
